@@ -1,66 +1,299 @@
-/*
-Error: Invalid CSS after "": expected selector, was "<i class="fab f..."
-        on line 50 of base.scss
-        from line 3 of style.scss
-
-Backtrace:
-base.scss:50
-style.scss:3
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1207:in `expected'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1137:in `expected'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1117:in `expr!'
-/usr/lib/ruby/vendor_ruby/sass/scss/static_parser.rb:20:in `parse_selector'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:427:in `visit_rule'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `block in visit'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `block in with_base'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `with_base'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `visit'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:328:in `map'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:88:in `block in with_import'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:88:in `with_import'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:325:in `visit_import'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `block in visit'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `block in with_base'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
-/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `with_base'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `visit'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `map'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:181:in `with_environment'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:168:in `visit_children'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:188:in `visit_root'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:159:in `visit'
-/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:8:in `visit'
-/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:36:in `css_tree'
-/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/usr/lib/ruby/vendor_ruby/sass/engine.rb:381:in `_render_with_sourcemap'
-/usr/lib/ruby/vendor_ruby/sass/engine.rb:298:in `render_with_sourcemap'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:473:in `on_file_changed'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:331:in `block in watch'
-/usr/lib/ruby/vendor_ruby/listen/event/config.rb:23:in `call'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:115:in `_process_changes'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:19:in `block in loop_for'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop_for'
-/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:84:in `_wait_for_changes'
-/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:42:in `block in setup'
-/usr/lib/ruby/vendor_ruby/listen/internals/thread_pool.rb:6:in `block in add'
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"\": expected selector, was \"<i class=\"fab f...\"\A         on line 50 of base.scss\A         from line 3 of style.scss"; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.75rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.25rem; }
+
+h6 {
+  font-size: 1rem; }
+
+p {
+  font-size: 1rem; }
+
+.padding {
+  padding: 1.5rem 0; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+a {
+  text-decoration: none; }
+
+.flex {
+  display: flex; }
+
+.flex-center {
+  justify-content: center; }
+
+.flex-between {
+  justify-content: space-between; }
+
+.grid {
+  display: grid; }
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.contact {
+  padding-top: 3rem;
+  padding-bottom: 2rem; }
+  .contact h6 {
+    color: #20c997;
+    font-weight: 900;
+    letter-spacing: .2rem;
+    text-align: center; }
+  .contact h1 {
+    font-weight: 900;
+    letter-spacing: .2rem;
+    text-align: center; }
+
+.contact_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem; }
+  .contact_grid .contact_email {
+    padding: 2rem 0; }
+    .contact_grid .contact_email input {
+      display: inline;
+      width: 95%;
+      font-size: 1rem;
+      padding: .6rem;
+      margin: .4rem 0; }
+    .contact_grid .contact_email textarea {
+      width: 95%;
+      font-size: 1rem;
+      padding: .6rem; }
+    .contact_grid .contact_email .contact_btn {
+      width: 7rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      height: 3rem;
+      color: #fff;
+      background: #343a40;
+      border-radius: .3rem;
+      border: none; }
+  .contact_grid .contact_add, .contact_grid .contact_ph {
+    padding: 0 0 2rem 0; }
+    .contact_grid .contact_add h5, .contact_grid .contact_ph h5 {
+      padding: 0 0 2rem 0; }
+  .contact_grid .contact_mail h5 {
+    padding: 0 0 1rem 0; }
+  .contact_grid .contact_mail .contact_icons {
+    padding: 1rem 0; }
+    .contact_grid .contact_mail .contact_icons .home {
+      color: greenyellow;
+      padding-right: .5rem; }
+
+@media all and (max-width: 768px) {
+  .contact_grid {
+    grid-template-columns: 1fr; } }
+.map_map .map_location {
+  padding: 2rem 0 1rem 0; }
+
+.footer {
+  background: #1E282E;
+  padding-top: 2.5rem; }
+
+.inside-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: #6c757d; }
+
+@media all and (max-width: 768px) {
+  .inside-footer {
+    grid-template-columns: 1fr; } }
+.title_footer {
+  color: #f8f9fa;
+  padding: 1rem 0; }
+
+.notitle_footer {
+  padding: 3.7rem 0; }
+
+.footer_navlink {
+  padding: 0 0 0 2.3rem; }
+  .footer_navlink .footer_link:hover {
+    color: #fff; }
+
+.notitle_footer .footer_link:hover {
+  color: #fff; }
+
+.footer_row {
+  padding: 0.4rem; }
+  .footer_row .footer_link {
+    color: #6c757d;
+    letter-spacing: 2px; }
+
+.new_add {
+  line-height: 1.9; }
+
+.footer_input {
+  width: 82%;
+  height: auto;
+  font-size: .9rem;
+  border: 1px solid #6c757d;
+  color: #f8f9fa;
+  background: #343a40;
+  padding: .5rem 0 .5rem 1rem;
+  background: #1E282E; }
+
+.footer_icon {
+  color: #343a40;
+  font-size: 1.2rem;
+  text-align: center; }
+
+.footer_btn {
+  display: inline;
+  background: none;
+  border: none;
+  position: relative;
+  left: -3rem;
+  color: #f8f9fa; }
+
+.footer_btn:hover {
+  cursor: pointer; }
+
+.footer_logo {
+  text-align: center; }
+  .footer_logo .footer_banner_logo {
+    padding: 1rem 0; }
+  .footer_logo .footer_logolink {
+    color: #f8f9fa;
+    font-size: 2.5rem; }
+    .footer_logo .footer_logolink .footer_banner {
+      font-weight: 700;
+      text-decoration: none;
+      background: #f8f9fa;
+      color: black;
+      padding: .1rem .9rem; }
+  .footer_logo .footer_para {
+    padding: 1.4rem 0;
+    text-align: center;
+    color: #6c757d;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5; }
+
+.footer_social_media {
+  padding: 1rem 0; }
+  .footer_social_media .social_link {
+    width: 7rem;
+    height: 2.3rem;
+    border-radius: 0.3rem;
+    border: none; }
+    .footer_social_media .social_link .footer_color {
+      color: #fff; }
+    .footer_social_media .social_link .facebook {
+      padding: 0 0.3rem;
+      font-size: 1rem; }
+    .footer_social_media .social_link .twitter {
+      padding: 0 0.3rem;
+      font-size: 1rem; }
+    .footer_social_media .social_link .linkedin {
+      padding: 0 0.3rem;
+      font-size: 1rem; }
+  .footer_social_media .one {
+    background: #354E82; }
+  .footer_social_media .two {
+    background: #007bff; }
+  .footer_social_media .three {
+    background: #dc3545; }
+  .footer_social_media .four {
+    background: #007bff; }
+  .footer_social_media .footer_up {
+    padding: 1.4rem 0;
+    padding-bottom: 5rem; }
+  .footer_social_media .arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: .5rem;
+    border: none;
+    background: #2F383F; }
+    .footer_social_media .arrow .uphome {
+      color: #fff; }
+
+.copyright {
+  background: #1C252B;
+  text-align: center;
+  color: #7C8082;
+  padding: 2rem 0; }
+  .copyright .w3layout {
+    text-decoration: none;
+    color: #7C8082; }
+  .copyright .w3layout:hover {
+    color: #f8f9fa; }
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=style.css.map */
